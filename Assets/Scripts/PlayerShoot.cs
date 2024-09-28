@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
     }
 
     void Shoot(InputAction.CallbackContext __){
-        GameObject newBullet = Instantiate(BulletTemplate, transform.position, transform.rotation);
+        GameObject newBullet = Instantiate(BulletTemplate, transform.position+(transform.forward*0.7f), transform.rotation);
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
     }
   
