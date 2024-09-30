@@ -23,7 +23,7 @@ public class Eshooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shotTime = Time.deltaTime;
+        shotTime -= Time.deltaTime;
 
         if(shotTime <= 0.0f){
             transform.LookAt(playerTarget.transform);
